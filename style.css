@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Part 1: Button hover effect */
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Box to animate with JS trigger */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: coral;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+.animate {
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+
+/* Popup animation */
+.popup {
+  display: none;
+  width: 200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
